@@ -1,49 +1,245 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>MochaPen's Website :3</title>
-        <link rel="icon" type="image/png" href="assets/bleh.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            .scrolling-background {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-image: linear-gradient(rgba(41, 41, 41, 0.4), rgba(41, 41, 41, 0.4)), url('assets/tiles.png');
-                background-repeat: repeat;
-                background-size: auto;
-                animation: scrollBackground 10s linear infinite;
-            }
-        
-            @keyframes scrollBackground {
-                from {
-                    background-position: 0 0;
-                }
-                to {
-                    background-position: 100% 0;
-                }
-            }
-        </style>
-    </head>
+	<head>
+		<title>MochaPen's Website :3</title>
+		<link rel="icon" type="image/png" href="assets/bleh.png">
+		<link rel="stylesheet" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
 
-    <body>
-        <!-- <audio autoplay id="music"> loop="true" ?
-            <source src="assets/idk5.mp3" type="audio/mpeg">
-        </audio> -->
+	<body>
+		<div class="background">
+		<div class="scrolling-background">
+		<audio loop id="music">
+			<source src="assets/AdenMayoTOWNY.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="select1"> <source src="assets/select1.wav" type="audio/wav"> </audio>
+		<audio id="select2"> <source src="assets/select2.wav" type="audio/wav"> </audio>
+		<audio id="select3"> <source src="assets/select3.wav" type="audio/wav"> </audio>
+		<audio id="select4"> <source src="assets/select4.wav" type="audio/wav"> </audio>
+		<audio id="select5"> <source src="assets/select5.wav" type="audio/wav"> </audio>
+		<audio id="select6"> <source src="assets/select6.wav" type="audio/wav"> </audio>
+		<audio id="meow1"> <source src="assets/meow1.wav" type="audio/wav"> </audio>
+		<audio id="meow2"> <source src="assets/meow2.wav" type="audio/wav"> </audio>
+		<audio id="meow3"> <source src="assets/meow3.wav" type="audio/wav"> </audio>
+		<audio id="meow4"> <source src="assets/meow4.wav" type="audio/wav"> </audio>
 
-        <div class="scrolling-background">
-            <a href="index.html"> Home </a>
-            <a href="projects.html"> Projects </a> </br>
-            <p>
-                Heloo!!!! </br>
-                I'm MochaPen </br>
-                This is a website made for my portfolio :3 </br> </br>
-                This website is under construction! </br>
-                Website will be updated soon!
-            </p>
-            <img src="assets/bleh.png"/>
-        </div>
-    </body>
+		<h2>
+			mochapen.github.io/MochaPen.com <button class="audio-btn" onclick="toggleAudio()"><img class="emote" src="assets/dancey-dance.gif"/> ｡⋆♫toggle audio♫⋆｡</button>
+		</h2>
+
+		<div class="tabs">
+			<button id="Projects.Button" class="tab-button" onclick="openTab('Projects')">
+				<img src="assets/tab icons/Projects.png"/> Projects
+			</button>
+
+			<button id="Contact.Button" class="tab-button" onclick="openTab('Contact')">
+				<img src="assets/tab icons/Contact.png"/> Contact
+			</button>
+
+			<button id="Home.Button" class="tab-button active" onclick="openTab('Home')">
+				<img src="assets/tab icons/Home.png"/> Home
+			</button>
+
+			<button id="AboutMe.Button" class="tab-button" onclick="openTab('AboutMe')">
+				<img src="assets/tab icons/AboutMe.png"/> About Me
+			</button>
+
+			<button id="Games.Button" class="tab-button" onclick="openTab('Games')">
+				<img src="assets/tab icons/Games.png"/> Games
+			</button>
+		</div>
+
+		<!-- PROJECTS -->
+		<div id="Projects" class="tab-content">
+			<img src="assets/games/juan.png" width="120"/>
+			<p>
+				Juan is an upcoming indie roguelite uno based card game. </br>
+				This project is in early development. </br>
+			</p>
+
+			<img src="assets/games/splodi.png" width="120"/>
+			<p>
+				Splodi is an upcoming indie game about exterminating bugs. </br>
+				This project is in early development. </br>
+			</p>
+
+			<img src="assets/games/overtie.png" width="120"/>
+			<p>
+				Overtie is an upcoming indie game. </br>
+				This project is on indefinite hiatus. </br>
+			</p>
+		</div>
+
+		<!-- CONTACT -->
+		<div id="Contact" class="tab-content">
+			<img src="">
+			<button class="contact-btn" onclick="openLink('https://mochapen.itch.io')"><img class="contact-image" src="assets/platforms/itchio.svg"></button>
+			<button class="contact-btn" onclick="openLink('https://discord.com/users/1151400860283326496')"><img class="contact-image" src="assets/platforms/discord.svg"></button>
+			<button class="contact-btn" onclick="openLink('https://steamcommunity.com/id/kaht8/')"><img class="contact-image" src="assets/platforms/steam.svg"></button>
+		</div>
+
+		<!-- HOME -->
+		<div id="Home" class="tab-content active">
+			<p>
+				I'm Mocha! :3 </br>
+				I like making and playing games! </br>
+				This is my silly little website,, </br>
+				maybes i will make the website look better later i domt knwe,, </br>
+				The buttons on the top will take you to differnt tabs </br>
+				</br>
+				PROJECTS - stuff im making! <img class="emote" src="assets/yippee.webp"/> </br>
+				CONTACT - my social medias <img class="emote" src="assets/wave.webp"/> </br>
+				HOME - you are here <img class="emote" src="assets/paranoy-house.gif"/> </br>
+				ABOUT ME - get to know all about meee <img class="emote" src="assets/blush.webp"/> </br>
+				GAMES - play my games... <img class="emote" src="assets/slendor.png"/>
+			</p>
+			<img class="secret-button" src="assets/mohaCropped.png" onclick="meow()"/>
+		</div>
+		
+		<!-- ABOUT ME -->
+		<div id="AboutMe" class="tab-content">
+			<h2>
+				Me!!!:
+			</h2>
+			<p>
+				⋆｡°✩call me mocha,, im vrry silly✩°｡⋆ </br>
+				meow :3c </br>
+				☆20☆ </br>
+				⋆✴︎I like making and playing games!✴︎⋆ </br>
+				⋆✮hyprfixations: phighting, mewgenics, dod, VOTV✮⋆ </br>
+				˚.⋆i hve autism pls be patient with me,,⋆.˚ </br>
+			</p>
+
+			<p>
+				im goings to add my ref here later,,
+				and also add my games here tooooo
+			</p>
+
+			</br>
+			<h2>
+				Skills:
+			</h2>
+			<p>
+				Game Designer, Programmer, Musician, Sound Designer, UI Designer and Beginner 3d modeler. </br>
+				Programming Languages: C#, HTML/CSS, GLSL
+			</p>
+
+			</br>
+			<h2>
+				Software i usee:
+			</h2>
+			<p>
+				Unity, Visual Studio Code, FL Studio, Audacity, Photoshop, Blender
+			</p>
+		</div>
+		
+		<!-- GAMES -->
+		<div id="Games" class="tab-content">
+			<h2>
+				<span class="text-un">Un</span><span class="text-synced">synced</span>
+			</h2>
+			<div class="game-wrapper">
+				<img src="https://img.itch.zone/aW1nLzEyMzA5NTMzLnBuZw==/315x250%23c/238ZT6.png" class="game-thumb">
+				<button class="play-btn" onclick="loadGame()">▶ Play Game</button>
+				<div id="game-container"></div>
+			</div>
+
+			<h2 class="text-astraeus">
+				Astraeus
+			</h2>
+			<a href=""></a>
+			<div class="game-wrapper-disabled">
+				<img src="https://img.itch.zone/aW1nLzE3MzkzNTk4LnBuZw==/315x250%23c/Y%2F3j9W.png" class="game-thumb-disabled">
+				<button class="play-btn" onclick="openLink('https://mochapen.itch.io/astraeus')">▶ Play Game</button>
+			</div>
+		</div>
+
+		<footer> hii !! (✿◡‿◡) </footer>
+
+		<script>
+			const buttons = document.querySelectorAll('.tab-button');
+			buttons.forEach(button => {
+				var lastBgColor = '#6e4e30';
+				button.addEventListener('mouseenter', () =>
+				{
+					lastBgColor = button.style.backgroundColor
+					button.style.backgroundColor = '#362312';
+					hoverSound();
+				});
+
+				button.addEventListener('mouseleave', () =>
+				{
+					button.style.backgroundColor = lastBgColor;
+				});
+			});
+
+			openTab("Home", "Home.Button");
+
+			function openTab(tabId, excludeButtonId)
+			{
+				const contents = document.querySelectorAll('.tab-content');
+				contents.forEach(content => {
+					content.classList.remove('active');
+				});
+
+				const buttons = document.querySelectorAll('.tab-button');
+				buttons.forEach(button => {
+					if (button.id != excludeButtonId)
+						button.classList.remove('active');
+				});
+
+				document.getElementById(tabId).classList.add('active');
+
+				event.target.classList.add('active');		
+			}
+
+			function loadGame()
+			{
+				const container = document.getElementById("game-container");
+
+				container.innerHTML = `
+					<iframe frameborder="0" src="https://itch.io/embed-upload/11267517?color=141428" allowfullscreen="" width="960" height="560"><a href="https://mochapen.itch.io/unsynced">Play Unsynced on itch.io</a></iframe>
+				`;
+
+				document.querySelector(".game-thumb").style.display = "none";
+				document.querySelector(".play-btn").style.display = "none";
+			}
+
+			function openLink(url)
+			{
+				window.open(url, "_blank");
+			}
+			
+			var audioEnabled = false;
+			function toggleAudio()
+			{
+				audioEnabled = !audioEnabled;
+
+				if (audioEnabled)
+					document.getElementById("music").play()
+				else
+					document.getElementById("music").pause()
+			}
+
+			function hoverSound()
+			{
+				if (audioEnabled)
+					document.getElementById("select" + randomInt(1, 6)).play()
+			}
+
+			function randomInt(min, max)
+			{
+				min = Math.ceil(min);
+				max = Math.floor(max);
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+
+			function meow()
+			{
+				if (audioEnabled)
+					document.getElementById("meow" + randomInt(1, 4)).play()
+			}
+		</script>
+	</body>
 </html>
