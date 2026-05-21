@@ -13,6 +13,7 @@
 		<audio loop id="music">
 			<source src="assets/AdenMayoTOWNY.mp3" type="audio/mpeg">
 		</audio>
+		<audio id="select"> <source src="assets/select.mp3" type="audio/mpeg"> </audio>
 		<audio id="select1"> <source src="assets/select1.wav" type="audio/wav"> </audio>
 		<audio id="select2"> <source src="assets/select2.wav" type="audio/wav"> </audio>
 		<audio id="select3"> <source src="assets/select3.wav" type="audio/wav"> </audio>
@@ -105,7 +106,11 @@
 			<p>
 				⋆｡°✩call me mocha,, im vrry silly✩°｡⋆ </br>
 				meow :3c </br>
-				☆20☆ </br>
+			</p>
+			<p id="ContainsAge">
+				☆CURRENTAGE☆
+			</p>
+			<p>
 				⋆✴︎I like making and playing games!✴︎⋆ </br>
 				⋆✮hyprfixations: phighting, mewgenics, dod, VOTV✮⋆ </br>
 				˚.⋆i hve autism pls be patient with me,,⋆.˚ </br>
@@ -158,6 +163,9 @@
 		<footer> hii !! (✿◡‿◡) </footer>
 
 		<script>
+			const ageText = document.getElementById('ContainsAge');
+			ageText.textContent = ageText.textContent.replace("CURRENTAGE", "" + (new Date().getFullYear() - 2006));
+	
 			const buttons = document.querySelectorAll('.tab-button');
 			buttons.forEach(button => {
 				var lastBgColor = '#6e4e30';
@@ -191,7 +199,10 @@
 
 				document.getElementById(tabId).classList.add('active');
 
-				event.target.classList.add('active');		
+				event.target.classList.add('active');
+				
+				if (audioEnabled)
+					document.getElementById("select").play()
 			}
 
 			function loadGame()
